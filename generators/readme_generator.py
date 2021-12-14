@@ -77,7 +77,7 @@ for day_idx in directories:
     for i, file in enumerate(files):
         if i > 0:
             file_links += " - "
-        file_links += "[Part {p}]({file})".format(file=files[0], p=i + 1)
+        file_links += "[Part {p}]({file})".format(file=files[i], p=i + 1)
 
     write_table_row(day_str, create_url(day_str, days[day_idx]), file_links)
 
