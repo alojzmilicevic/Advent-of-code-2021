@@ -74,10 +74,13 @@ for day_idx in directories:
     files = get_files(day_str)
 
     file_links = ""
-    for i, file in enumerate(files):
-        if i > 0:
-            file_links += " - "
-        file_links += "[Part {p}]({file})".format(file=files[i], p=i + 1)
+    if len(files) == 1:
+        file_links = "[Part 1 & 2]({file})".format(file=files[0])
+    if len(files) == 2:
+        for i, file in enumerate(files):
+            if i > 0:
+                file_links += " - "
+            file_links += "[Part {p}]({file})".format(file=files[i], p=i + 1)
 
     write_table_row(day_str, create_url(day_str, days[day_idx]), file_links)
 
