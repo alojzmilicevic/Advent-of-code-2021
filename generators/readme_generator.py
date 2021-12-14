@@ -41,7 +41,7 @@ def write_table_row(first, second, third):
     f.write('|' + first + '|' + second + '|' + third + '|\n')
 
 
-f = open('README.md', 'a', encoding="utf-8")
+f = open('../README.md', 'a', encoding="utf-8")
 
 todays_date = date.today()
 year = str(todays_date.year)
